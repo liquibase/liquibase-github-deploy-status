@@ -31,7 +31,9 @@ incidents:
     enabled: true
     minimumAge: 15  # Auto-close incidents shorter than 15 min (false positives)
 
-# Notifications (configured via repo secrets, see CSOL-75)
-# notifications:
-#   - type: slack
-#     channel: C0000000000
+# Notifications
+# Requires repo secrets: NOTIFICATION_SLACK=true, NOTIFICATION_SLACK_WEBHOOK=true,
+# NOTIFICATION_SLACK_WEBHOOK_URL=<actual Slack incoming webhook URL>
+notifications:
+  - type: slack
+    channel: liquibase-secure-alerts
