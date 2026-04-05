@@ -1,36 +1,37 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: liquibase
+repo: liquibase-secure-status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
-  - name: IPv6 test
-    url: forwardemail.net
-    port: 80
-    check: "tcp-ping"
-    ipv6: true
+  - name: Liquibase Secure API
+    url: https://github-deployer.liquibase.com/api/health
+    expectedStatusCodes:
+      - 200
+    body: '"status":"UP"'
+    maxResponseTime: 5000
+  - name: Liquibase Secure Homepage
+    url: https://github-deployer.liquibase.com
+    maxResponseTime: 5000
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.github-deployer.liquibase.com
+  logoUrl: https://www.liquibase.com/wp-content/uploads/2024/10/Liquibase-logo.svg
+  name: Liquibase Secure Status
+  introTitle: "**Liquibase Secure for GitHub** — Service Status"
+  introMessage: Real-time uptime monitoring powered by [Upptime](https://github.com/upptime/upptime). Checks run every 5 minutes via GitHub Actions.
   navbar:
     - title: Status
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
+  theme: light
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# Incident management
+incidents:
+  autoClose:
+    enabled: true
+    minimumAge: 15  # Auto-close incidents shorter than 15 min (false positives)
+
+# Notifications (configured via repo secrets, see CSOL-75)
+# notifications:
+#   - type: slack
+#     channel: C0000000000
