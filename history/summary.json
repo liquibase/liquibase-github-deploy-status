@@ -4,35 +4,39 @@
     "url": "https://github-deployer.liquibase.com/api/health",
     "icon": "https://icons.duckduckgo.com/ip3/github-deployer.liquibase.com.ico",
     "slug": "liquibase-secure-api",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 208,
-    "timeDay": 83,
-    "timeWeek": 209,
-    "timeMonth": 208,
-    "timeYear": 208,
-    "dailyMinutesDown": {}
+    "time": 211,
+    "timeDay": 181,
+    "timeWeek": 218,
+    "timeMonth": 211,
+    "timeYear": 211,
+    "dailyMinutesDown": {
+      "2026-04-28": 0
+    }
   },
   {
     "name": "Liquibase Secure Homepage",
     "url": "https://github-deployer.liquibase.com",
     "icon": "https://icons.duckduckgo.com/ip3/github-deployer.liquibase.com.ico",
     "slug": "liquibase-secure-homepage",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 44,
-    "timeDay": 14,
-    "timeWeek": 51,
+    "timeDay": 37,
+    "timeWeek": 52,
     "timeMonth": 44,
     "timeYear": 44,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-04-28": 0
+    }
   }
 ]
