@@ -1,7 +1,7 @@
 url: https://github-deployer.liquibase.com/api/health
 status: down
 code: 503
-responseTime: 55
-lastUpdated: 2026-06-01T23:35:08.584Z
+responseTime: 119
+lastUpdated: 2026-06-02T23:38:24.396Z
 startTime: 2026-04-05T06:35:50.479Z
 generator: Upptime <https://github.com/upptime/upptime>
